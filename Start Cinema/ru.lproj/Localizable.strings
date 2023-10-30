@@ -1,0 +1,24 @@
+// MARK: - TabBar
+"HOME" = "Главная";
+"COMING SOON" = "Скоро выйдет";
+"TOP SEARCH" = "Топ поиска";
+"DOWNLOADS" = "Загрузки";
+
+// MARK: - HeroHeaderUIView
+
+"PLAY" = "Включить";
+"DOWNLOAD" = "Скачать";
+
+// MARK: - Header
+
+"TRANDING_M" = "Популярные фильмы";
+"POPULAR" = "Популярные";
+"TRANDING_TV"= "Популярные сериалы";
+"UPCOMMING" = "Предстоящие фильмы";
+"TOP" = "Самые популярные";
+"UPCOMING" = "Предстоящие";
+"SEARCH" = "Поиск";
+"SEARCH_MOVIE_TV" = "Поиск фильмов или сериалов";
+"DOWNLOAD_BUTTON" = "Загрузить";
+"DOWNLOAD_CONTEXT_MENU" = "Загрузить";
+"DOWNLOADS_CONTROLLER" = "Загрузки";

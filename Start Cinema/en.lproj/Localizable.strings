@@ -1,0 +1,25 @@
+// MARK: - TabBar
+
+"HOME" = "Home";
+"COMING SOON" = "Coming Soon";
+"TOP SEARCH" = "Top Search";
+"DOWNLOADS" = "Downloads";
+
+// MARK: - HeroHeaderUIView
+
+"PLAY" = "Play";
+"DOWNLOAD" = "Download";
+
+// MARK: - Header
+
+"TRANDING_M" = "Trending Movies";
+"POPULAR" = "Popular";
+"TRANDING_TV"= "Trending TV";
+"UPCOMMING" = "Upcomming Movies";
+"TOP" = "Top rated";
+"UPCOMING" = "Upcoming";
+"SEARCH" = "Search";
+"SEARCH_MOVIE_TV" = "Search for a Movie or Tv show";
+"DOWNLOAD_BUTTON" = "Download";
+"DOWNLOAD_CONTEXT_MENU" = "Download";
+"DOWNLOADS_CONTROLLER" = "Downloads";
