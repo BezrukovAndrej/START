@@ -9,16 +9,34 @@
 "PLAY" = "Включить";
 "DOWNLOAD" = "Скачать";
 
-// MARK: - Header
+// MARK: - Header Controller
 
 "TRANDING_M" = "Популярные фильмы";
 "POPULAR" = "Популярные";
 "TRANDING_TV"= "Популярные сериалы";
 "UPCOMMING" = "Предстоящие фильмы";
 "TOP" = "Самые популярные";
-"UPCOMING" = "Предстоящие";
+
+// MARK: - Upcoming Controller
+
+"UPCOMING" = "Скоро выйдет";
+
+// MARK: - Upcoming Controller
+
 "SEARCH" = "Поиск";
-"SEARCH_MOVIE_TV" = "Поиск фильмов или сериалов";
+"SEARCH_MOVIE_TV" = "Поиск фильмов и сериалов";
+
+// MARK: - Download Controller
+
 "DOWNLOAD_BUTTON" = "Загрузить";
+
+// MARK: -  ContextMenu
+
 "DOWNLOAD_CONTEXT_MENU" = "Загрузить";
 "DOWNLOADS_CONTROLLER" = "Загрузки";
+
+// MARK: - Onboarding
+
+"ONBOARDING_BUTTON" = "К просмотру фильмов";
+"PAGE_ONE" = "Смотрите на любом устройстве";
+"PAGE_TWO" = "3, 2, 1,... скачать!";

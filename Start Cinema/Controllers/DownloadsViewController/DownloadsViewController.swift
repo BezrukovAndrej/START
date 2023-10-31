@@ -22,11 +22,17 @@ final class DownloadsViewController: UIViewController {
         
         setupDownloadsView()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+    }
 
     func setupDownloadsView() {
         view.addViewWithNoTAMIC(downloadedTable)
         view.backgroundColor = .stBlack
+        
         title = "DOWNLOADS_CONTROLLER".localized
+        navigationController?.navigationBar.tintColor = .label
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         
@@ -37,7 +43,7 @@ final class DownloadsViewController: UIViewController {
         downloadedTable.dataSource = self
         fetchLocalStorageForDownload()
         
-        NotificationCenter.default.addObserver(forName: NSNotification.Name("downloded"), object: nil, queue: nil) { _ in
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(Constants.notificationName), object: nil, queue: nil) { _ in
             self.fetchLocalStorageForDownload()
         }
     }
@@ -62,12 +68,18 @@ final class DownloadsViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDataSource / UITableViewDelegate
+
 extension DownloadsViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, 
+                   numberOfRowsInSection section: Int
+    ) -> Int {
         return titles.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, 
+                   cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleTableViewCell.identifier, for: indexPath) as? TitleTableViewCell else { return UITableViewCell() }
         cell.selectionStyle = .none
         guard let title = titles[indexPath.row].original_title else { return UITableViewCell() }
@@ -76,11 +88,16 @@ extension DownloadsViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, 
+                   heightForRowAt indexPath: IndexPath
+    ) -> CGFloat {
         return 140
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, 
+                   commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath
+    ) {
         switch editingStyle {
         case .delete:
             DataPersistenceManager.shared.deleteTitleWith(model: titles[indexPath.row]) { [weak self] result in
@@ -98,7 +115,9 @@ extension DownloadsViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, 
+                   didSelectRowAt indexPath: IndexPath
+    ) {
         let title = titles[indexPath.row]
         guard let titleName = title.original_title ?? title.original_name else { return }
         

@@ -12,10 +12,11 @@ enum ApiError: Error {
 }
 
 final class ApiCaller {
+    
     static let shared = ApiCaller()
     
     func getTrendingMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
-        guard let url = URL(string: "\(Constants.baseURL)/3/trending/movie/day?api_key=\(Constants.apiKey)") else { return }
+        guard let url = URL(string: "\(Constants.baseURL)\(Constants.trendingMovie)\(Constants.apiKey)") else { return }
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
             guard let data, error == nil else { return }
             do {
@@ -29,7 +30,7 @@ final class ApiCaller {
     }
     
     func getTrendingTvs(completion: @escaping (Result<[Title], Error>) -> Void) {
-        guard let url = URL(string: "\(Constants.baseURL)/3/trending/tv/day?api_key=\(Constants.apiKey)") else { return }
+        guard let url = URL(string: "\(Constants.baseURL)\(Constants.trendingTV)\(Constants.apiKey)") else { return }
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
             guard let data, error == nil else { return }
             do {
@@ -43,7 +44,7 @@ final class ApiCaller {
     }
     
     func getUpcomingMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
-        guard let url = URL(string: "\(Constants.baseURL)/3/movie/upcoming?api_key=\(Constants.apiKey)") else { return }
+        guard let url = URL(string: "\(Constants.baseURL)\(Constants.upcomingMovie)\(Constants.apiKey)") else { return }
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
             guard let data, error == nil else { return }
             do {
@@ -57,7 +58,7 @@ final class ApiCaller {
     }
     
     func getPopular(completion: @escaping (Result<[Title], Error>) -> Void) {
-        guard let url = URL(string: "\(Constants.baseURL)/3/movie/popular?api_key=\(Constants.apiKey)") else { return }
+        guard let url = URL(string: "\(Constants.baseURL)\(Constants.moviePopular)\(Constants.apiKey)") else { return }
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
             guard let data, error == nil else { return }
             do {
@@ -71,7 +72,7 @@ final class ApiCaller {
     }
     
     func getTopRated(completion: @escaping (Result<[Title], Error>) -> Void) {
-        guard let url = URL(string: "\(Constants.baseURL)/3/movie/top_rated?api_key=\(Constants.apiKey)") else { return }
+        guard let url = URL(string: "\(Constants.baseURL)\(Constants.movieTop)\(Constants.apiKey)") else { return }
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
             guard let data, error == nil else { return }
             do {
@@ -85,7 +86,7 @@ final class ApiCaller {
     }
     
     func getDiscoverMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
-        guard let url = URL(string: "\(Constants.baseURL)/3/discover/movie?api_key=\(Constants.apiKey)") else { return }
+        guard let url = URL(string: "\(Constants.baseURL)\(Constants.discover)\(Constants.apiKey)") else { return }
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
             guard let data, error == nil else { return }
             do {
@@ -99,7 +100,7 @@ final class ApiCaller {
     }
     
     func search(with quary: String, completion: @escaping (Result<[Title], Error>) -> Void) {
-        guard let url = URL(string: "\(Constants.baseURL)/3/search/movie?api_key=\(Constants.apiKey)&query=\(quary)") else { return }
+        guard let url = URL(string: "\(Constants.baseURL)\(Constants.search)\(Constants.apiKey)&query=\(quary)") else { return }
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
             guard let data, error == nil else { return }
             do {

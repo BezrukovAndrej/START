@@ -23,7 +23,6 @@
 		912E278C2AE6B062003FCE01 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E278B2AE6B062003FCE01 /* CollectionViewTableViewCell.swift */; };
 		912E278E2AE6B0F8003FCE01 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E278D2AE6B0F8003FCE01 /* Constants.swift */; };
 		912E27902AE6B83D003FCE01 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E278F2AE6B83D003FCE01 /* HeroHeaderUIView.swift */; };
-		912E27932AE6C2A1003FCE01 /* HomeViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E27922AE6C2A1003FCE01 /* HomeViewController + TableView.swift */; };
 		912E27982AE8FC3F003FCE01 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E27972AE8FC3F003FCE01 /* ApiCaller.swift */; };
 		912E279A2AE9087A003FCE01 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E27992AE9087A003FCE01 /* Title.swift */; };
 		912E279F2AE92347003FCE01 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 912E279E2AE92347003FCE01 /* SDWebImage */; };
@@ -31,10 +30,12 @@
 		912E27A32AE946AE003FCE01 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E27A22AE946AE003FCE01 /* TitleCollectionViewCell.swift */; };
 		9155045F2AEFA54900E102FE /* Start Cinema.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9155045D2AEFA54900E102FE /* Start Cinema.xcdatamodeld */; };
 		915504612AEFA95000E102FE /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915504602AEFA95000E102FE /* DataPersistenceManager.swift */; };
-		91B79D412AEBBD9D00BC62F2 /* UpcomingViewController + Table .swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B79D402AEBBD9D00BC62F2 /* UpcomingViewController + Table .swift */; };
+		915504642AF0F4E300E102FE /* UIImage + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915504632AF0F4E300E102FE /* UIImage + Extensions.swift */; };
+		915504672AF1128000E102FE /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915504662AF1127F00E102FE /* OnboardingViewController.swift */; };
+		915504692AF112A500E102FE /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915504682AF112A500E102FE /* PageViewController.swift */; };
+		9155046B2AF112C600E102FE /* Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9155046A2AF112C500E102FE /* Pages.swift */; };
 		91B79D452AEBC5DB00BC62F2 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B79D442AEBC5DB00BC62F2 /* TitleTableViewCell.swift */; };
 		91B79D472AEBCA1500BC62F2 /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B79D462AEBCA1500BC62F2 /* TitleViewModel.swift */; };
-		91B79D492AEBDDEB00BC62F2 /* SearchViewController + Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B79D482AEBDDEB00BC62F2 /* SearchViewController + Table.swift */; };
 		91B79D4D2AEBEC5500BC62F2 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B79D4C2AEBEC5400BC62F2 /* SearchResultViewController.swift */; };
 		91B79D4F2AEE6BCA00BC62F2 /* YoutubeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B79D4E2AEE6BCA00BC62F2 /* YoutubeSearchResponse.swift */; };
 		91B79D512AEE7BF300BC62F2 /* TitlePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B79D502AEE7BF300BC62F2 /* TitlePreviewViewController.swift */; };
@@ -61,16 +62,17 @@
 		912E278B2AE6B062003FCE01 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		912E278D2AE6B0F8003FCE01 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		912E278F2AE6B83D003FCE01 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
-		912E27922AE6C2A1003FCE01 /* HomeViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController + TableView.swift"; sourceTree = "<group>"; };
 		912E27972AE8FC3F003FCE01 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		912E27992AE9087A003FCE01 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		912E27A22AE946AE003FCE01 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		9155045E2AEFA54900E102FE /* Start Cinema.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Start Cinema.xcdatamodel"; sourceTree = "<group>"; };
 		915504602AEFA95000E102FE /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
-		91B79D402AEBBD9D00BC62F2 /* UpcomingViewController + Table .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UpcomingViewController + Table .swift"; sourceTree = "<group>"; };
+		915504632AF0F4E300E102FE /* UIImage + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extensions.swift"; sourceTree = "<group>"; };
+		915504662AF1127F00E102FE /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		915504682AF112A500E102FE /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		9155046A2AF112C500E102FE /* Pages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pages.swift; sourceTree = "<group>"; };
 		91B79D442AEBC5DB00BC62F2 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		91B79D462AEBCA1500BC62F2 /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
-		91B79D482AEBDDEB00BC62F2 /* SearchViewController + Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController + Table.swift"; sourceTree = "<group>"; };
 		91B79D4C2AEBEC5400BC62F2 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		91B79D4E2AEE6BCA00BC62F2 /* YoutubeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeSearchResponse.swift; sourceTree = "<group>"; };
 		91B79D502AEE7BF300BC62F2 /* TitlePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				912E276C2AE688BD003FCE01 /* Application */,
+				915504622AF02BA300E102FE /* CoreData */,
+				915504652AF1126C00E102FE /* Onboarding */,
 				912E27892AE6B021003FCE01 /* Managers */,
 				912E27882AE6AFEC003FCE01 /* Models */,
 				912E27862AE6AFD1003FCE01 /* Views */,
@@ -118,7 +122,6 @@
 				912E276E2AE68BB4003FCE01 /* Extensions */,
 				912E276D2AE688D1003FCE01 /* SupportingFiles */,
 				912E27792AE68D4D003FCE01 /* Localizable.strings */,
-				9155045D2AEFA54900E102FE /* Start Cinema.xcdatamodeld */,
 			);
 			path = "Start Cinema";
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 		912E276F2AE68C1E003FCE01 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				915504632AF0F4E300E102FE /* UIImage + Extensions.swift */,
 				912E27722AE68CC7003FCE01 /* UIView + Extensions.swift */,
 				912E277B2AE69302003FCE01 /* UIColor + Extensions.swift */,
 			);
@@ -205,7 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				912E27972AE8FC3F003FCE01 /* ApiCaller.swift */,
-				915504602AEFA95000E102FE /* DataPersistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -214,7 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				912E277E2AE69535003FCE01 /* HomeViewController.swift */,
-				912E27922AE6C2A1003FCE01 /* HomeViewController + TableView.swift */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -223,7 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				912E27802AE696CF003FCE01 /* UpcomingViewController.swift */,
-				91B79D402AEBBD9D00BC62F2 /* UpcomingViewController + Table .swift */,
 			);
 			path = UpcomingViewController;
 			sourceTree = "<group>";
@@ -232,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				912E27822AE696FC003FCE01 /* SearchViewController.swift */,
-				91B79D482AEBDDEB00BC62F2 /* SearchViewController + Table.swift */,
 			);
 			path = SearchViewController;
 			sourceTree = "<group>";
@@ -243,6 +243,25 @@
 				912E27842AE69725003FCE01 /* DownloadsViewController.swift */,
 			);
 			path = DownloadsViewController;
+			sourceTree = "<group>";
+		};
+		915504622AF02BA300E102FE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				9155045D2AEFA54900E102FE /* Start Cinema.xcdatamodeld */,
+				915504602AEFA95000E102FE /* DataPersistenceManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		915504652AF1126C00E102FE /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				915504662AF1127F00E102FE /* OnboardingViewController.swift */,
+				915504682AF112A500E102FE /* PageViewController.swift */,
+				9155046A2AF112C500E102FE /* Pages.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		91B79D422AEBC59100BC62F2 /* HomeViews */ = {
@@ -360,13 +379,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				912E27852AE69725003FCE01 /* DownloadsViewController.swift in Sources */,
-				91B79D492AEBDDEB00BC62F2 /* SearchViewController + Table.swift in Sources */,
 				9155045F2AEFA54900E102FE /* Start Cinema.xcdatamodeld in Sources */,
 				912E27812AE696CF003FCE01 /* UpcomingViewController.swift in Sources */,
-				91B79D412AEBBD9D00BC62F2 /* UpcomingViewController + Table .swift in Sources */,
 				912E27732AE68CC7003FCE01 /* UIView + Extensions.swift in Sources */,
 				912E278C2AE6B062003FCE01 /* CollectionViewTableViewCell.swift in Sources */,
 				912E27A32AE946AE003FCE01 /* TitleCollectionViewCell.swift in Sources */,
+				915504692AF112A500E102FE /* PageViewController.swift in Sources */,
 				912E27982AE8FC3F003FCE01 /* ApiCaller.swift in Sources */,
 				91B79D4D2AEBEC5500BC62F2 /* SearchResultViewController.swift in Sources */,
 				912E275D2AE68886003FCE01 /* MainTabBarViewController.swift in Sources */,
@@ -374,16 +392,18 @@
 				91B79D472AEBCA1500BC62F2 /* TitleViewModel.swift in Sources */,
 				912E27832AE696FC003FCE01 /* SearchViewController.swift in Sources */,
 				912E27592AE68886003FCE01 /* AppDelegate.swift in Sources */,
+				915504672AF1128000E102FE /* OnboardingViewController.swift in Sources */,
 				912E27902AE6B83D003FCE01 /* HeroHeaderUIView.swift in Sources */,
 				91B79D4F2AEE6BCA00BC62F2 /* YoutubeSearchResponse.swift in Sources */,
 				912E277C2AE69302003FCE01 /* UIColor + Extensions.swift in Sources */,
+				9155046B2AF112C600E102FE /* Pages.swift in Sources */,
 				915504612AEFA95000E102FE /* DataPersistenceManager.swift in Sources */,
 				912E27712AE68C9A003FCE01 /* String + Extensions.swift in Sources */,
 				91B79D532AEE819600BC62F2 /* TitlePreviewViewModel.swift in Sources */,
 				912E277F2AE69535003FCE01 /* HomeViewController.swift in Sources */,
 				91B79D452AEBC5DB00BC62F2 /* TitleTableViewCell.swift in Sources */,
+				915504642AF0F4E300E102FE /* UIImage + Extensions.swift in Sources */,
 				91B79D512AEE7BF300BC62F2 /* TitlePreviewViewController.swift in Sources */,
-				912E27932AE6C2A1003FCE01 /* HomeViewController + TableView.swift in Sources */,
 				912E275B2AE68886003FCE01 /* SceneDelegate.swift in Sources */,
 				912E278E2AE6B0F8003FCE01 /* Constants.swift in Sources */,
 			);

@@ -28,7 +28,8 @@ final class TitleTableViewCell: UITableViewCell {
     
     private let playTitleButton: UIButton = {
         let button = UIButton()
-        let image = UIImage(systemName: "play.circle", withConfiguration: UIImage.SymbolConfiguration(pointSize: 30))
+        var image = UIImage.IconMainMar.playCircle
+        image?.withConfiguration(UIImage.SymbolConfiguration(pointSize: 30))
         button.tintColor = .label
         button.setImage(image, for: .normal)
         return button
@@ -53,7 +54,7 @@ final class TitleTableViewCell: UITableViewCell {
     
     private func addSubviews() {
         contentView.backgroundColor = .stBlack
-        [titlePousterUIimageView, titleLabel, playTitleButton].forEach{ contentView.addViewWithNoTAMIC($0)}
+        [titlePousterUIimageView, titleLabel, playTitleButton].forEach{ contentView.addViewWithNoTAMIC($0) }
     }
     
     private func setConstraints() {

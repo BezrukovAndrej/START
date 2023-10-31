@@ -2,7 +2,7 @@
 
 "HOME" = "Home";
 "COMING SOON" = "Coming Soon";
-"TOP SEARCH" = "Top Search";
+"TOP SEARCH" = "Search";
 "DOWNLOADS" = "Downloads";
 
 // MARK: - HeroHeaderUIView
@@ -10,16 +10,34 @@
 "PLAY" = "Play";
 "DOWNLOAD" = "Download";
 
-// MARK: - Header
+// MARK: - Home Controller
 
 "TRANDING_M" = "Trending Movies";
 "POPULAR" = "Popular";
 "TRANDING_TV"= "Trending TV";
 "UPCOMMING" = "Upcomming Movies";
 "TOP" = "Top rated";
-"UPCOMING" = "Upcoming";
+
+// MARK: - Upcoming Controller
+
+"UPCOMING" = "Coming Soon";
+
+// MARK: - Upcoming Controller
+
 "SEARCH" = "Search";
 "SEARCH_MOVIE_TV" = "Search for a Movie or Tv show";
+
+// MARK: - Download Controller
+
+"DOWNLOADS_CONTROLLER" = "Downloads";
+
+// MARK: -  ContextMenu
+
 "DOWNLOAD_BUTTON" = "Download";
 "DOWNLOAD_CONTEXT_MENU" = "Download";
-"DOWNLOADS_CONTROLLER" = "Downloads";
+
+// MARK: - Onboarding
+
+"ONBOARDING_BUTTON" = "To watch movies";
+"PAGE_ONE" = "Watch on any device";
+"PAGE_TWO" = "3, 2, 1,... download!";

@@ -36,6 +36,12 @@ final class TitlePreviewViewController: UIViewController {
         return button
     }()
     
+    private lazy var scrollView: UIScrollView = {
+        let scroll = UIScrollView()
+        scroll.backgroundColor = .stBlack
+        return scroll
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,30 +64,37 @@ extension TitlePreviewViewController {
     
     private func addSubviews() {
         view.backgroundColor = .stBlack
+        view.addViewWithNoTAMIC(scrollView)
         [webView, titleLabel,
-         overviewLabel, downloadButton].forEach{ view.addViewWithNoTAMIC($0) }
+         overviewLabel, downloadButton].forEach{ scrollView.addViewWithNoTAMIC($0) }
     }
     
     private func setConstraints() {
-    
         NSLayoutConstraint.activate([
-            webView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            webView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            webView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            webView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            webView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 10),
+            webView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -10),
+            webView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -20),
             webView.heightAnchor.constraint(equalToConstant: 250),
             
             titleLabel.topAnchor.constraint(equalTo: webView.bottomAnchor, constant: 20),
-            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            titleLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 20),
+            titleLabel.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -20),
             
             overviewLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 15),
-            overviewLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            overviewLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            overviewLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 20),
+            overviewLabel.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -20),
             
-            downloadButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            downloadButton.topAnchor.constraint(equalTo: overviewLabel.bottomAnchor, constant: 25),
+            downloadButton.topAnchor.constraint(equalTo: overviewLabel.bottomAnchor, constant: 20),
+            downloadButton.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -20),
+            downloadButton.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             downloadButton.widthAnchor.constraint(equalToConstant: 140),
-            downloadButton.heightAnchor.constraint(equalToConstant: 40)
+            downloadButton.heightAnchor.constraint(equalToConstant: 40),
         ])
     }
 }

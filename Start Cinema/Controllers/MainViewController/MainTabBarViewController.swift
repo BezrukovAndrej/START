@@ -30,11 +30,11 @@ final class MainTabBarViewController: UITabBarController {
     private func generateTabBarIconsWithName(for viewControllers: [UIViewController]?) {
         guard let viewControllers else { return }
         
-        let homeImage = UIImage(systemName: "house")
-        let searchImage = UIImage(systemName: "play.circle")
-        let basketImage = UIImage(systemName: "magnifyingglass")
-        let accountImage = UIImage(systemName: "arrow.down.to.line")
-        let imagesArray = [homeImage, searchImage, basketImage, accountImage]
+        let homeImage = UIImage.IconMainMar.homeImage
+        let searchImage = UIImage.IconMainMar.searchImage
+        let basketImage = UIImage.IconMainMar.basketImage
+        let downloadsIamge = UIImage.IconMainMar.downloadsIamge
+        let imagesArray = [homeImage, searchImage, basketImage, downloadsIamge]
         
         let homeName = "HOME".localized
         let searchName = "COMING SOON".localized

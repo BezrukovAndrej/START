@@ -50,9 +50,12 @@ final class HeroHeaderUIView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
         heroImageView.frame = bounds
         gradientLayer.frame = bounds
+        
         addGradient()
+        
         bringSubviewToFront(playButton)
         bringSubviewToFront(downloadButton)
     }
@@ -63,14 +66,17 @@ final class HeroHeaderUIView: UIView {
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
+        
         playButton.layer.borderColor = UIColor.stWhite.cgColor
         downloadButton.layer.borderColor = UIColor.stWhite.cgColor
+        
         addGradient()
     }
     
     public func configure(with model: TitleViewModel) {
         guard let url = URL(string: "\(Constants.configureCellImage)\(model.posterURL)") else { return }
         heroImageView.sd_setImage(with: url, completed: nil)
+        
     }
     
     private func addGradient() {
@@ -99,7 +105,6 @@ extension HeroHeaderUIView {
     }
     
     private func setConstraints() {
-        
         NSLayoutConstraint.activate([
             playButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
             playButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
