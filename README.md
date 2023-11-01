@@ -3,7 +3,7 @@
 START - это онлайн кинотеатр(просмотр трейлеров)
 
 ## Скринкаст 
-
+[START](https://disk.yandex.ru/i/J-qKEKaGe8hXBw)
 
 ## **Скриншот**
 <a href="https://ibb.co/bdzPCh7"><img src="https://i.ibb.co/ysWXZTV/Group-6.jpg" alt="Group-6" border="0"></a>
