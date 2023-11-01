@@ -8,6 +8,6 @@ START - это онлайн кинотеатр(просмотр трейлеро
 
 ## **Ссылки**
 
-[Макет Figma](https://www.figma.com/file/l0IMG3Eys35fUrbvArtwsR/YP-Quiz?node-id=34%3A243)
+[Google developer console](https://www.themoviedb.org](https://console.cloud.google.com/)
 
-[API IMDb]()
+[API IMDb](https://www.themoviedb.org)
