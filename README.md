@@ -8,6 +8,6 @@ START - это онлайн кинотеатр(просмотр трейлеро
 
 ## **Ссылки**
 
-[Google developer console](https://www.themoviedb.org](https://console.cloud.google.com/)
+[Google developer console](https://console.cloud.google.com/)
 
 [API IMDb](https://www.themoviedb.org)
