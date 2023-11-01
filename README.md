@@ -10,4 +10,6 @@ START - это онлайн кинотеатр(просмотр трейлеро
 
 [Google developer console](https://console.cloud.google.com/)
 
-[API IMDb](https://www.themoviedb.org)
+[The Movie Database (TMDB)](https://www.themoviedb.org)
+
+[YouTube Data API](https://developers.google.com/youtube/v3?hl=ru)
