@@ -39,6 +39,8 @@ final class HomeViewController: UIViewController {
         
         configureHeroHeaderView()
         startTimer()
+        
+        UIBlockingProgressHUD.show()
     }
 
     override func viewDidLayoutSubviews() {
@@ -175,6 +177,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         default:
             return UITableViewCell()
         }
+        
+        cell.allImageLoadedCallback = {
+            UIBlockingProgressHUD.dismiss()
+        }
+        
         return cell
     }
     
@@ -214,6 +221,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offSet))
     }
 }
+
+// MARK: - CollectionViewTableViewCellDelegate
 
 extension HomeViewController: CollectionViewTableViewCellDelegate {
     func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel) {

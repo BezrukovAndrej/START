@@ -64,6 +64,7 @@ final class DownloadsViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
         downloadedTable.frame = view.bounds
     }
 }

@@ -41,3 +41,7 @@
 "ONBOARDING_BUTTON" = "To watch movies";
 "PAGE_ONE" = "Watch on any device";
 "PAGE_TWO" = "3, 2, 1,... download!";
+
+// MARK: - UIBlockingProgressHUD
+
+"LOADING" = "Loading...";

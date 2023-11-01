@@ -11,6 +11,7 @@ import WebKit
 final class TitlePreviewViewController: UIViewController {
     
     private let webView: WKWebView = WKWebView()
+    private var webViewObserver: WebViewObserver?
     
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -45,14 +46,19 @@ final class TitlePreviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        webViewObserver = WebViewObserver(webView: webView)
         addSubviews()
         setConstraints()
     }
     
+    deinit {
+           webViewObserver = nil
+       }
+    
     func configure(with model: TitlePreviewViewModel) {
+        UIBlockingProgressHUD.show()
         titleLabel.text = model.title
         overviewLabel.text = model.titleOverview
-        
         guard let url = URL(string: "\(Constants.youTubeSearchId)\(model.youtubeView.id.videoId)") else { return }
         webView.load(URLRequest(url: url))
     }

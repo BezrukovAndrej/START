@@ -11,6 +11,8 @@ import SDWebImage
 final class TitleTableViewCell: UITableViewCell {
     
     static let identifier = Constants.identifierUpcomingCell
+    private var gradientViews = Set<UIView>()
+    private var numberOfImagesBeingLoaded = 0
     
     private let titlePousterUIimageView: UIImageView = {
         let imageView = UIImageView()
@@ -40,6 +42,11 @@ final class TitleTableViewCell: UITableViewCell {
         
         addSubviews()
         setConstraints()
+        createGradient()
+    }
+    
+    override func prepareForReuse() {
+        createGradient()
     }
     
     required init?(coder: NSCoder) {
@@ -47,9 +54,35 @@ final class TitleTableViewCell: UITableViewCell {
     }
     
     public func configure(with model: TitleViewModel) {
-        guard let url = URL(string: "\(Constants.configureCellImage)\(model.posterURL)") else { return }
-        titlePousterUIimageView.sd_setImage(with: url, completed: nil)
-        titleLabel.text = model.titleName
+        numberOfImagesBeingLoaded += 1
+        guard let url = URL(string: "\(Constants.configureCellImage)\(model.posterURL)") else {
+            handleImageLoadCompletion()
+            return
+        }
+        titlePousterUIimageView.sd_setImage(with: url) { [weak self] (_, _, _, _) in
+            self?.titleLabel.text = model.titleName
+            self?.handleImageLoadCompletion()
+        }
+    }
+    
+    private func handleImageLoadCompletion() {
+        numberOfImagesBeingLoaded -= 1
+        
+        if numberOfImagesBeingLoaded == 0 {
+            removeGradient()
+        }
+    }
+    
+    private func createGradient() {
+        let imageView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: 100, height: 140)))
+            imageView.applyGradientWithAnimation()
+            gradientViews.insert(imageView)
+        
+        titlePousterUIimageView.addViewWithNoTAMIC(imageView)
+    }
+    
+    private func removeGradient() {
+        gradientViews.forEach { $0.removeGradientWithAnimation() }
     }
     
     private func addSubviews() {

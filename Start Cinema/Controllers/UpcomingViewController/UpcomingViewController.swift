@@ -21,6 +21,7 @@ final class UpcomingViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
         upcomingTable.frame = view.bounds
     }
     

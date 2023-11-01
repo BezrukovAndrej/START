@@ -16,7 +16,8 @@ final class CollectionViewTableViewCell: UITableViewCell {
     
     static let identifier = Constants.identifierTableCell
     weak var delegate: CollectionViewTableViewCellDelegate?
-    private var titles: [Title] = [Title]()
+    private var titles: [Title] = []
+    var allImageLoadedCallback: (() -> Void)?
     
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -34,7 +35,6 @@ final class CollectionViewTableViewCell: UITableViewCell {
         
         collectionView.dataSource = self
         collectionView.delegate = self
-        
         collectionView.showsHorizontalScrollIndicator = false
     }
     
@@ -52,6 +52,7 @@ final class CollectionViewTableViewCell: UITableViewCell {
         self.titles = titles
         DispatchQueue.main.async { [weak self] in
             self?.collectionView.reloadData()
+            self?.allImageLoadedCallback?()
         }
     }
     
@@ -120,8 +121,10 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
                         contextMenuConfigurationForItemAt indexPath: IndexPath,
                         point: CGPoint
     ) -> UIContextMenuConfiguration? {
-        let config = UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { [weak self] _ in
-            let downloadAction = UIAction(title: "DOWNLOAD_CONTEXT_MENU".localized, 
+        let config = UIContextMenuConfiguration(
+            identifier: nil,
+            previewProvider: nil) { [weak self] _ in
+            let downloadAction = UIAction(title: "DOWNLOAD_CONTEXT_MENU".localized,
                                           image: UIImage.IconMainMar.downloadsIamge,
                                           state: .off) { _ in
                 self?.downloadTitleAt(indexPath: indexPath)

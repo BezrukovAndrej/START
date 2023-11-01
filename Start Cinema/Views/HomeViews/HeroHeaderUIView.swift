@@ -9,6 +9,9 @@ import UIKit
 
 final class HeroHeaderUIView: UIView {
     
+    private var gradientViews = Set<UIView>()
+    private var numberOfImagesBeingLoaded = 0
+    
     private let heroImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -46,6 +49,7 @@ final class HeroHeaderUIView: UIView {
         
         addSubviews()
         setConstraints()
+        createGradient()
     }
     
     override func layoutSubviews() {
@@ -74,9 +78,14 @@ final class HeroHeaderUIView: UIView {
     }
     
     public func configure(with model: TitleViewModel) {
-        guard let url = URL(string: "\(Constants.configureCellImage)\(model.posterURL)") else { return }
-        heroImageView.sd_setImage(with: url, completed: nil)
-        
+        numberOfImagesBeingLoaded += 1
+        guard let url = URL(string: "\(Constants.configureCellImage)\(model.posterURL)") else {
+            handleImageLoadCompletion()
+            return
+        }
+        heroImageView.sd_setImage(with: url) { [weak self] (_, _, _, _) in
+            self?.handleImageLoadCompletion()
+         }
     }
     
     private func addGradient() {
@@ -93,6 +102,26 @@ final class HeroHeaderUIView: UIView {
         }
         gradientLayer.frame = bounds
         layer.addSublayer(gradientLayer)
+    }
+    
+    private func handleImageLoadCompletion() {
+        numberOfImagesBeingLoaded -= 1
+        
+        if numberOfImagesBeingLoaded == 0 {
+            removeGradient()
+        }
+    }
+    
+    private func createGradient() {
+        let imageView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: 400, height: 550)))
+            imageView.applyGradientWithAnimation()
+            gradientViews.insert(imageView)
+        
+        heroImageView.addViewWithNoTAMIC(imageView)
+    }
+    
+    private func removeGradient() {
+        gradientViews.forEach { $0.removeGradientWithAnimation()}
     }
 }
 

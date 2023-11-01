@@ -1,7 +1,7 @@
 // MARK: - TabBar
 "HOME" = "Главная";
 "COMING SOON" = "Скоро выйдет";
-"TOP SEARCH" = "Топ поиска";
+"TOP SEARCH" = "Поиск";
 "DOWNLOADS" = "Загрузки";
 
 // MARK: - HeroHeaderUIView
@@ -40,3 +40,7 @@
 "ONBOARDING_BUTTON" = "К просмотру фильмов";
 "PAGE_ONE" = "Смотрите на любом устройстве";
 "PAGE_TWO" = "3, 2, 1,... скачать!";
+
+// MARK: - UIBlockingProgressHUD
+
+"LOADING" = "Загрузка...";
