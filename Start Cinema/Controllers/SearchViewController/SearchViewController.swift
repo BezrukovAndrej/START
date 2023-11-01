@@ -9,8 +9,13 @@ import UIKit
 
 final class SearchViewController: UIViewController {
     
-    private var titles: [Title] = [Title]()
-    private let discoverTable = UITableView(frame: .zero, style: .grouped)
+    private var titles: [Title] = []
+    
+    private let discoverTable: UITableView = {
+        let tebleView = UITableView(frame: .zero, style: .grouped)
+        tebleView.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
+        return tebleView
+    }()
     
     private let searchController: UISearchController = {
         let controller = UISearchController(searchResultsController: SearchResultViewController())
@@ -50,13 +55,8 @@ final class SearchViewController: UIViewController {
         discoverTable.showsVerticalScrollIndicator = false
         discoverTable.delegate = self
         discoverTable.dataSource = self
-        
-        registerCells()
-        fetchDiscoverMovies()
-    }
     
-    private func registerCells() {
-        discoverTable.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
+        fetchDiscoverMovies()
     }
 }
 

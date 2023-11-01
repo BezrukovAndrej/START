@@ -13,7 +13,7 @@ protocol SearchResultViewControllerDelegate: AnyObject {
 
 final class SearchResultViewController: UIViewController {
 
-    public var titles: [Title] = [Title]()
+    public var titles: [Title] = []
     public weak var delegate: SearchResultViewControllerDelegate?
     
     public let searchResultCollectionView: UICollectionView = {
@@ -44,7 +44,9 @@ final class SearchResultViewController: UIViewController {
         DataPersistenceManager.shared.downloadTitleWith(model: titles[indexPath.row]) { result in
             switch result {
             case .success():
-                NotificationCenter.default.post(name: NSNotification.Name(Constants.notificationName), object: nil)
+                NotificationCenter.default.post(
+                    name: NSNotification.Name(Constants.notificationName),
+                    object: nil)
             case .failure(let error):
                 print(error.localizedDescription)
             }

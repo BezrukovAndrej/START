@@ -60,7 +60,9 @@ final class CollectionViewTableViewCell: UITableViewCell {
         DataPersistenceManager.shared.downloadTitleWith(model: titles[indexPath.row]) { result in
             switch result {
             case .success():
-                NotificationCenter.default.post(name: NSNotification.Name(Constants.notificationName), object: nil)
+                NotificationCenter.default.post(
+                    name: NSNotification.Name(Constants.notificationName),
+                    object: nil)
             case .failure(let error):
                 print(error.localizedDescription)
             }

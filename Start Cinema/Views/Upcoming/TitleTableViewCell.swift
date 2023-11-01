@@ -84,6 +84,11 @@ final class TitleTableViewCell: UITableViewCell {
     private func removeGradient() {
         gradientViews.forEach { $0.removeGradientWithAnimation() }
     }
+}
+
+// MARK: - Add subviews / Set constraints
+
+extension TitleTableViewCell {
     
     private func addSubviews() {
         contentView.backgroundColor = .stBlack

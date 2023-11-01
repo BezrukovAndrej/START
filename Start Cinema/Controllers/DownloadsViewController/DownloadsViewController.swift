@@ -9,7 +9,7 @@ import UIKit
 
 final class DownloadsViewController: UIViewController {
     
-    private var titles: [TitleItem] = [TitleItem]()
+    private var titles: [TitleItem] = []
     
     private let downloadedTable: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
@@ -43,7 +43,10 @@ final class DownloadsViewController: UIViewController {
         downloadedTable.dataSource = self
         fetchLocalStorageForDownload()
         
-        NotificationCenter.default.addObserver(forName: NSNotification.Name(Constants.notificationName), object: nil, queue: nil) { _ in
+        NotificationCenter.default.addObserver(
+            forName: NSNotification.Name(Constants.notificationName),
+            object: nil,
+            queue: nil) { _ in
             self.fetchLocalStorageForDownload()
         }
     }

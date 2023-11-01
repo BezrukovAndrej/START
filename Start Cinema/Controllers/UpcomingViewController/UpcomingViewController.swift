@@ -9,8 +9,13 @@ import UIKit
 
 final class UpcomingViewController: UIViewController {
     
-    private var titles: [Title] = [Title]()
-    private let upcomingTable = UITableView(frame: .zero, style: .grouped)
+    private var titles: [Title] = []
+   
+    private let upcomingTable: UITableView = {
+        let tebleView = UITableView(frame: .zero, style: .grouped)
+        tebleView.register(TitleTableViewCell.self,forCellReuseIdentifier: TitleTableViewCell.identifier)
+        return tebleView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,14 +44,8 @@ final class UpcomingViewController: UIViewController {
         upcomingTable.showsVerticalScrollIndicator = false
         upcomingTable.delegate = self
         upcomingTable.dataSource = self
-        
-        registerCells()
-        fetchUpcoming()
-    }
     
-    private func registerCells() {
-        upcomingTable.register(TitleTableViewCell.self,
-                               forCellReuseIdentifier: TitleTableViewCell.identifier)
+        fetchUpcoming()
     }
     
     private func fetchUpcoming() {

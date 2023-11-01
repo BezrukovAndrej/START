@@ -24,7 +24,11 @@ final class HomeViewController: UIViewController {
     private let sectionTitle = ["TRANDING_M", "TRANDING_TV", "POPULAR",
                                   "UPCOMMING", "TOP"]
     
-    private let homeTableView = UITableView(frame: .zero, style: .grouped)
+    private let homeTableView: UITableView = {
+        let tebleView = UITableView(frame: .zero, style: .grouped)
+        tebleView.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
+        return tebleView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,13 +37,8 @@ final class HomeViewController: UIViewController {
         
         configureNavBar()
         setupHomeView()
-        
-        headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 550))
-        homeTableView.tableHeaderView = headerView
-        
         configureHeroHeaderView()
         startTimer()
-        
         UIBlockingProgressHUD.show()
     }
 
@@ -56,14 +55,10 @@ final class HomeViewController: UIViewController {
         homeTableView.dataSource = self
         homeTableView.separatorStyle = .none
         homeTableView.showsVerticalScrollIndicator = false
-        
-        registerCells()
+        headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 550))
+        homeTableView.tableHeaderView = headerView
     }
-    
-    private func registerCells() {
-        homeTableView.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
-    }
-    
+
     private func configureNavBar() {
         var image = UIImage.Logo.logo
         image = image?.withRenderingMode(.alwaysOriginal)
@@ -110,6 +105,8 @@ final class HomeViewController: UIViewController {
         }
     }
 }
+
+// MARK: - UITableViewDelegate / UITableViewDataSource
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
