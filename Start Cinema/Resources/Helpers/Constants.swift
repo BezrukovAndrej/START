@@ -12,7 +12,7 @@ struct Constants {
     static let identifierViewCell = "TitleCollectionViewCell"
     static let identifierUpcomingCell = "TitleTableViewCell"
     
-    static let apiKey = "e01d7ca0b2dc17471badb0671c70461c"
+    //static let apiKey = Добавьте свой ключ от / Add your key "The Movie Database (TMDB)"
     static let baseURL = "https://api.themoviedb.org/"
     static let configureCellImage = "https://image.tmdb.org/t/p/w500/"
     static let trendingMovie = "/3/trending/movie/day?api_key="
@@ -26,7 +26,7 @@ struct Constants {
     static let notificationName = "downloded"
     static let trailer = "trailer"
     
-    static let youTubeApi = "AIzaSyDgPfJ6vJW2PUdxIrE_JXIrhadFKgPTlz8"
+    //static let youTubeApi = Добавьте свой ключ от / Add your key console.cloud.google
     static let youTubeBaseURL = "https://youtube.googleapis.com/youtube/v3/search?"
     static let youTubeSearchId = "https://www.youtube.com/embed/"
 }
