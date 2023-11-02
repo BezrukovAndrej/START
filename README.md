@@ -16,3 +16,17 @@ START - это онлайн кинотеатр(просмотр трейлеро
 [The Movie Database (TMDB) API](https://www.themoviedb.org)
 
 [YouTube Data API](https://developers.google.com/youtube/v3?hl=ru)
+
+## Краткое описание приложения
+- Список самых популярных фильмов.
+- Описание фильма.
+
+Приложение состоит из:
+1. Онбординг 
+2. Гланый экран
+   - 
+
+## **Использовалось**
+- No storyboard, 100% Programmatic UI
+- SDWebImage
+- Dark Mode
