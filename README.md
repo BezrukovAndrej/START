@@ -27,7 +27,7 @@ START - это онлайн кинотеатр(просмотр трейлеро
 Приложение состоит из:
 - Онбординг
 - Главный экран:
-   - Загаловок с рандомным изображением фильма, сериала, мультфильма
+   - Заголовок с рандомным изображением фильма, сериала, мультфильма
    - Популярные фильмы
    - Популярные сериалы
    - Популярные по просмотрам
@@ -46,6 +46,39 @@ START - это онлайн кинотеатр(просмотр трейлеро
 - WebKit
 - ProgressHUD
 - CoreData
+- UserDefaults
+- Localization
+- Dark Mode
+
+## Brief description of the application
+- List of the most popular films, TV series and cartoons
+- Film description.
+- View the trailer of the movie you are interested in
+- Add to "downloads" for future viewing
+- Removing a watched movie, TV series or cartoon from the “download”
+
+The application consists of:
+- Onboarding
+- Main screen:
+    - Header with a random image of a film, TV series, cartoon
+    - Popular movies
+    - Popular TV series
+    - Popular by views
+    - Upcoming films
+    - Most popular of all time by views
+- Coming soon:
+    - Upcoming movie releases are displayed
+- Search:
+    - Search for films, TV series and cartoons
+- Downloads:
+   - Here are the movies you selected
+ 
+## **Used**
+- No storyboard, 100% Programmatic UI
+-SDWebImage
+- WebKit
+- ProgressHUD
+-CoreData
 - UserDefaults
 - Localization
 - Dark Mode
