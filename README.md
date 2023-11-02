@@ -1,15 +1,17 @@
 ## **START**
 
-START - это онлайн кинотеатр(просмотр трейлеров)
+START
+это онлайн кинотеатр(просмотр трейлеров)
+this is an online cinema (watching trailers)
 
-## Скринкаст 
+## Скринкаст / Screencast 
 [START](https://disk.yandex.ru/i/J-qKEKaGe8hXBw)
 
-## **Скриншот**
+## **Скриншот / Screenshot**
 <a href="https://ibb.co/bdzPCh7"><img src="https://i.ibb.co/ysWXZTV/Group-6.jpg" alt="Group-6" border="0"></a>
 <a href="https://ibb.co/qWvLs1k"><img src="https://i.ibb.co/KLJcqyF/Group-7.png" alt="Group-7" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>
 
-## **Ссылки**
+## **Ссылки / Links**
 
 [Google developer console](https://console.cloud.google.com/)
 
