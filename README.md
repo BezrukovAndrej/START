@@ -1,7 +1,5 @@
 ## **START**
 
-START
-
 Это онлайн кинотеатр(просмотр трейлеров)
 
 This is an online cinema (watching trailers)
