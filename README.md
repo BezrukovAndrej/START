@@ -1,9 +1,10 @@
 ## **START**
 
 START
-это онлайн кинотеатр(просмотр трейлеров)
 
-this is an online cinema (watching trailers)
+Это онлайн кинотеатр(просмотр трейлеров)
+
+This is an online cinema (watching trailers)
 
 ## Скринкаст / Screencast 
 [START](https://disk.yandex.ru/i/J-qKEKaGe8hXBw)
