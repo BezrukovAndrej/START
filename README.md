@@ -80,7 +80,7 @@ The application consists of:
 -SDWebImage
 - WebKit
 - ProgressHUD
--CoreData
+- CoreData
 - UserDefaults
 - Localization
 - Dark Mode
