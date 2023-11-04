@@ -77,7 +77,7 @@ The application consists of:
  
 ## **Used**
 - No storyboard, 100% Programmatic UI
--SDWebImage
+- SDWebImage
 - WebKit
 - ProgressHUD
 - CoreData
